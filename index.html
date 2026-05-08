@@ -55,28 +55,28 @@ h1 {
   font-size: 13px;
 }
 
-.section { margin-top: 36px; }
+.section { margin-top: 32px; }
 .section-title {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 600;
   color: var(--text);
-  margin: 0 0 14px 0;
-  padding: 10px 14px;
-  border-radius: 10px;
-  background: linear-gradient(90deg, rgba(255,107,53,0.14), rgba(255,107,53,0.02));
-  border-left: 4px solid var(--accent);
+  margin: 0 0 12px 0;
+  padding: 7px 12px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, rgba(255,107,53,0.06), rgba(255,107,53,0.01));
+  border-left: 3px solid rgba(255,107,53,0.45);
   letter-spacing: 0.2px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 .section-title .count {
   display: inline-block;
-  background: var(--accent);
-  color: #fff;
+  background: rgba(255,107,53,0.10);
+  color: var(--accent);
   border-radius: 10px;
-  padding: 1px 9px;
-  font-size: 12px;
+  padding: 1px 8px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0;
 }
@@ -95,8 +95,9 @@ h1 {
   content: '';
   position: absolute;
   left: 0; top: 0; bottom: 0;
-  width: 4px;
+  width: 3px;
   background: var(--c-upcoming);
+  opacity: 0.55;
 }
 .card.status-ongoing::before   { background: var(--c-ongoing); }
 .card.status-imminent::before  { background: var(--c-imminent); }
@@ -130,9 +131,9 @@ h1 {
   color: var(--muted);
   white-space: nowrap;
 }
-.badge-ongoing   { background: rgba(255,77,79,0.15);  color: var(--c-ongoing); }
-.badge-imminent  { background: rgba(250,173,20,0.15); color: var(--c-imminent); }
-.badge-upcoming  { background: rgba(22,119,255,0.12); color: var(--c-upcoming); }
+.badge-ongoing   { background: rgba(255,77,79,0.10);  color: var(--c-ongoing); }
+.badge-imminent  { background: rgba(250,173,20,0.10); color: var(--c-imminent); }
+.badge-upcoming  { background: rgba(22,119,255,0.08); color: var(--c-upcoming); }
 
 .meta {
   color: var(--muted);
@@ -172,7 +173,7 @@ footer {
 <div class="container">
   <header>
     <h1>📚 歌力思学院2026年度课程预告表</h1>
-    <div class="subtitle">最后更新 2026-05-08 19:57 · 共 1 门</div>
+    <div class="subtitle">最后更新 2026-05-08 20:14 · 共 1 门</div>
   </header>
   
         <div class="section">
