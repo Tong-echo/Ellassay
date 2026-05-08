@@ -17,6 +17,7 @@
   --c-ongoing: #ff4d4f;
   --c-imminent: #faad14;
   --c-upcoming: #1677ff;
+  --c-tbd: #a78bfa;
   --c-completed: #b0b0b6;
   --c-cancelled: #c0c0c6;
   --c-postponed: #c0c0c6;
@@ -102,6 +103,7 @@ h1 {
 .card.status-ongoing::before   { background: var(--c-ongoing); }
 .card.status-imminent::before  { background: var(--c-imminent); }
 .card.status-upcoming::before  { background: var(--c-upcoming); }
+.card.status-tbd::before       { background: var(--c-tbd); }
 .card.status-completed::before { background: var(--c-completed); }
 .card.status-cancelled::before { background: var(--c-cancelled); }
 .card.status-postponed::before { background: var(--c-postponed); }
@@ -134,6 +136,7 @@ h1 {
 .badge-ongoing   { background: rgba(255,77,79,0.10);  color: var(--c-ongoing); }
 .badge-imminent  { background: rgba(250,173,20,0.10); color: var(--c-imminent); }
 .badge-upcoming  { background: rgba(22,119,255,0.08); color: var(--c-upcoming); }
+.badge-tbd       { background: rgba(167,139,250,0.12); color: var(--c-tbd); }
 
 .meta {
   color: var(--muted);
@@ -173,7 +176,7 @@ footer {
 <div class="container">
   <header>
     <h1>📚 歌力思学院2026年度课程预告表</h1>
-    <div class="subtitle">最后更新 2026-05-08 20:14 · 共 1 门</div>
+    <div class="subtitle">最后更新 2026-05-08 20:32 · 共 2 门</div>
   </header>
   
         <div class="section">
@@ -188,6 +191,21 @@ footer {
           <div class="countdown"><span data-countdown-to="2026-05-26T17:00:00">…</span> 后开始</div>
           <div class="info">
             <div class="row">🕒 05月26日 17:00 ~ 18:00</div><div class="row">📍 B座13楼大培训室</div>
+          </div>
+        </div>
+        </div>
+        <div class="section">
+          <h2 class="section-title">🏛 品牌力分院 <span class="count">1</span></h2>
+          
+        <div class="card status-tbd">
+          <div class="card-head">
+            <div class="name">审美力提升课</div>
+            <div class="badge badge-tbd">时间待定</div>
+          </div>
+          <div class="meta"><span>👤 张琬、吴艳菲、唐俊</span></div>
+          
+          <div class="info">
+            <div class="row">🕒 5月下旬</div><div class="row">📍 待定</div><div class="row desc">💡 公开课｜创意内容影响力 → 审美提升</div>
           </div>
         </div>
         </div>
