@@ -112,11 +112,8 @@ h1 {
 .card.status-postponed { opacity: 0.7; }
 
 .card-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 12px;
   margin-bottom: 4px;
+  padding-right: 90px;
 }
 .name {
   font-size: 17px;
@@ -124,7 +121,9 @@ h1 {
   letter-spacing: -0.2px;
 }
 .badge {
-  flex-shrink: 0;
+  position: absolute;
+  top: 16px;
+  right: 18px;
   font-size: 11px;
   font-weight: 600;
   padding: 3px 8px;
@@ -181,16 +180,15 @@ h1 {
   pointer-events: none;
 }
 
-/* 桌面端：按钮紧贴在徽章正下方（右上角） */
+/* 桌面端：按钮在卡片右下角，与徽章在同一垂直线上（右边对齐 18px），底部对齐内容底部 */
 @media (min-width: 600px) {
   .card.has-signup {
     padding-right: 150px;
-    min-height: 110px;
   }
   .card.has-signup .signup-btn {
     position: absolute;
-    top: 50px;
     right: 18px;
+    bottom: 16px;
     margin-top: 0;
     width: 116px;
     box-sizing: border-box;
@@ -226,7 +224,7 @@ footer {
 <div class="container">
   <header>
     <h1>📚 歌力思学院2026年度课程预告表</h1>
-    <div class="subtitle">最后更新 2026-05-08 21:06 · 共 6 门</div>
+    <div class="subtitle">最后更新 2026-05-08 21:12 · 共 6 门</div>
   </header>
   
         <div class="section">
