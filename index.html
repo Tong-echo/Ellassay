@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta http-equiv="refresh" content="120">
+<title>我的课程</title>
+<style>
+:root {
+  --bg: #f4f4f6;
+  --card-bg: #ffffff;
+  --text: #1c1c1e;
+  --muted: #8a8a8e;
+  --border: #ececef;
+  --accent: #ff6b35;
+  --shadow: 0 1px 2px rgba(0,0,0,0.04), 0 1px 8px rgba(0,0,0,0.03);
+  --c-ongoing: #ff4d4f;
+  --c-imminent: #faad14;
+  --c-upcoming: #1677ff;
+  --c-completed: #b0b0b6;
+  --c-cancelled: #c0c0c6;
+  --c-postponed: #c0c0c6;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000;
+    --card-bg: #1c1c1e;
+    --text: #f2f2f7;
+    --muted: #8e8e93;
+    --border: #2c2c2e;
+    --shadow: none;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 24px 16px 80px;
+}
+.container { max-width: 720px; margin: 0 auto; }
+header { margin-bottom: 8px; }
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  letter-spacing: -0.5px;
+}
+.subtitle {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.section { margin-top: 28px; }
+.section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  margin: 0 0 12px 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-title .count {
+  display: inline-block;
+  background: var(--border);
+  color: var(--muted);
+  border-radius: 10px;
+  padding: 1px 8px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: var(--c-upcoming);
+}
+.card.status-ongoing::before   { background: var(--c-ongoing); }
+.card.status-imminent::before  { background: var(--c-imminent); }
+.card.status-upcoming::before  { background: var(--c-upcoming); }
+.card.status-completed::before { background: var(--c-completed); }
+.card.status-cancelled::before { background: var(--c-cancelled); }
+.card.status-postponed::before { background: var(--c-postponed); }
+.card.status-completed,
+.card.status-cancelled,
+.card.status-postponed { opacity: 0.7; }
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+.name {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+.badge {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 8px;
+  background: var(--border);
+  color: var(--muted);
+  white-space: nowrap;
+}
+.badge-ongoing   { background: rgba(255,77,79,0.15);  color: var(--c-ongoing); }
+.badge-imminent  { background: rgba(250,173,20,0.15); color: var(--c-imminent); }
+.badge-upcoming  { background: rgba(22,119,255,0.12); color: var(--c-upcoming); }
+
+.meta {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.countdown {
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 600;
+  margin: 6px 0;
+}
+.countdown.ongoing { color: var(--c-ongoing); }
+.info { font-size: 14px; color: var(--text); }
+.info .row { margin-top: 4px; color: var(--muted); }
+.info .row.desc { color: var(--text); }
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 100px 0;
+  font-size: 15px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 60px;
+  color: var(--muted);
+  font-size: 12px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>📚 我的课程</h1>
+    <div class="subtitle">最后更新 2026-05-08 19:10 · 共 1 门</div>
+  </header>
+  
+        <div class="section">
+          <h2 class="section-title">📆 更远 <span class="count">1</span></h2>
+          
+        <div class="card status-upcoming">
+          <div class="card-head">
+            <div class="name">CPI解读</div>
+            <div class="badge badge-upcoming">未开始</div>
+          </div>
+          <div class="meta"><span>👤 徐国雄</span> · <span>🏛 组织力分院</span></div>
+          <div class="countdown"><span data-countdown-to="2026-05-26T17:00:00">…</span> 后开始</div>
+          <div class="info">
+            <div class="row">🕒 05月26日 17:00 ~ 18:00</div><div class="row">📍 B座13楼大培训室</div>
+          </div>
+        </div>
+        </div>
+  <footer>对话更新 · 自动同步</footer>
+</div>
+<script>
+function tick() {
+  const now = Date.now();
+  document.querySelectorAll('[data-countdown-to]').forEach(el => {
+    const t = new Date(el.dataset.countdownTo).getTime();
+    const diff = t - now;
+    if (diff <= 0) { el.textContent = '已开始'; return; }
+    const days = Math.floor(diff / 86400000);
+    const hours = Math.floor((diff % 86400000) / 3600000);
+    const mins = Math.floor((diff % 3600000) / 60000);
+    const parts = [];
+    if (days) parts.push(days + '天');
+    if (hours) parts.push(hours + '小时');
+    if (mins || (!days && !hours)) parts.push(mins + '分钟');
+    el.textContent = parts.join(' ');
+  });
+}
+tick();
+setInterval(tick, 30000);
+</script>
+</body>
+</html>

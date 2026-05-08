@@ -1,0 +1,8 @@
+# 数据源 / 中间产物 / 工具脚本不发布
+courses.json
+courses_status.md
+scripts/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
