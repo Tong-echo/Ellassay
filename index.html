@@ -463,6 +463,19 @@ function tick() {
 }
 tick();
 setInterval(tick, 30000);
+
+// 动态更新标题栏课程数量 & 可报名数
+function updateSubtitle() {
+  const total = document.querySelectorAll('.card').length;
+  const openSignup = document.querySelectorAll('.signup-btn:not(.disabled):not([aria-disabled="true"])').length;
+  const el = document.querySelector('.subtitle');
+  if (!el) return;
+  const dateMatch = el.textContent.match(/最后更新\s[\d-]+\s[\d:]+/);
+  const dateText = dateMatch ? dateMatch[0] : '最后更新';
+  el.textContent = dateText + ' · 共 ' + total + ' 门'
+    + (openSignup > 0 ? ' · ' + openSignup + ' 门可报名' : '');
+}
+updateSubtitle();
 </script>
 </body>
 </html>
